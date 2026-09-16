@@ -15,3 +15,6 @@ class Program
             }
         }
 }
+
+    //Refaktuering - fixar/städar upp koden så att den blir lättare att förstå. Byta namn, ta bort dubbleter och långa metoder
+    //Merge konflikt - Att inte ändra medans den andra kodar. Svårt att läsa in koden igen, kunde undo via "git changes" och sen hela filer. 
