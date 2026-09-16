@@ -1,18 +1,31 @@
 ﻿
 using System;
-using System.Net.NetworkInformation;
 
-namespace ChessBoard
+class Program
 {
-    public class Chessboard
+    static void Main(string[] args)
     {
-        public static int ReadSize()
+        // Example: read text from the console and parse to int safely
+        Console.Write("Enter a number: ");
+        string input = Console.ReadLine();
+
+        if (int.TryParse(input, out int value))
         {
-            Console.WriteLine("Ange storleken på schackbrädet 3 - 50. "); // Vi skriver ut en fråga till använden om att ge en siffra mellan 3 -50. 
-            string input = Console.ReadLine();
+            Console.WriteLine($"You entered: {value}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid number. Please enter only digits.");
         }
 
+        // Another example: parsing a known string without throwing exceptions
+        string s = "123";
+        if (int.TryParse(s, out int parsed))
+        {
+            Console.WriteLine($"Parsed from string: {parsed}");
+        }
 
-
+        Console.WriteLine("Press Enter to exit...");
+        Console.ReadLine();
     }
 }
