@@ -1,9 +1,12 @@
 ﻿namespace ChessBoard;
 
+
 class Program
 {
     static void Main(string[] args) //Startpunkten
     {
+        int number; //number måste ligga utanför loopen för att använda senare
+
         {
             Console.WriteLine("Ange storleken på schackbrädet 3 - 50. "); // Vi skriver ut en fråga till använden om att ge en siffra mellan 3 -50. 
             string input = Console.ReadLine(); //VÄntar på att användaren ska skriva in siffror
