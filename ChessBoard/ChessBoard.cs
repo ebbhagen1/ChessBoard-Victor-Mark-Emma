@@ -18,7 +18,7 @@ public class ChessBoard //Klass Chessboard (När vi skapar ett objekt i Program.
 				}
 				 else
 				{
-					Console.Write(" 0 "); 
+					Console.Write(" 0 "); //Skriver ut 0 
 				}
 			}
 			Console.WriteLine(); //Hoppar till nästa rad när kolumnerna är klara
