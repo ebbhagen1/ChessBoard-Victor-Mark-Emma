@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Runtime.InteropServices.Marshalling;
+using Spectre.Console;  //Spectre låter oss rita ut snygga gränssnitt med färgstark text eller animationer.
 
 namespace ChessBoard
 {
@@ -15,13 +17,14 @@ namespace ChessBoard
 					if ((rad + kolumn) % 2 == 0) // Om rad och kolumn är jämna, skriver programemet ut en X ruta, ananrs 0
 
 					{
-						Console.Write(" X ");
+						AnsiConsole.Markup("[Black on White] X [/]");//För att kunna skriva ut i färger/tecken behöver vi använda AnsiConsole. 
 
 					}
 					else
 					{
-						Console.Write(" 0 ");
-					}
+						AnsiConsole.Markup("[Black on White] 0 [/]");
+
+                    }
 				}
 				Console.WriteLine(); //Hoppar till nästa rad när kolumnerna är klara
 			}
