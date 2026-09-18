@@ -1,5 +1,6 @@
 ﻿using System;
 using Spectre.Console;
+using chessBoard;
 
 namespace ChessBoard
 {
@@ -8,11 +9,13 @@ namespace ChessBoard
     {
         static void Main(string[] args) //Startpunkten
         {
+            Ansiconsole.markupLine("[bold yellow] Chessboard[/]"); //markupline lägger fär på rubriken
+
             while (true) //yttre loopen som håller programmet igång.
             {
                 int nummer; //number måste ligga utanför loopen 
 
-                while (true) // Vi Loopar till vi bryter oss ut med "Break" //
+                while (true) // DEn inre Loopar till vi bryter oss ut med "Break" //
                              // när vi inte vet hur många försök det kommer ta
                 {
                     Console.WriteLine("Ange storleken på schackbrädet 3 - 50, vill du avsluta ange 0! "); // Vi skriver ut en fråga till använden om att ge en siffra mellan 3 -50. 
@@ -31,7 +34,8 @@ namespace ChessBoard
 
                     Console.WriteLine("Fel inmatning, vad god ange en siffra"); //Skickar ut ett meddelande till användaren att skriva en siffra
                 }
-                RenderBoard myBoard = new RenderBoard(nummer); // skapar schackbrädet - när vi anropar konstruktorn med användarens siffra.
+                var myBoard = new RenderBoard(nummer); // skapar schackbrädet - när vi anropar konstruktorn med användarens siffra.
+                myboard.Render();
             }
         }
     }
