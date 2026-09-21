@@ -9,7 +9,10 @@ namespace ChessBoard
     {
         static void Main(string[] args) //Startpunkten
         {
-            Ansiconsole.markupLine("[bold yellow] Chessboard[/]"); //markupline lägger fär på rubriken
+            /*Ansiconsole.markupLine("[bold yellow] Chessboard[/]");*/ //markupline lägger fär på rubriken
+            // Unicode-stöd i konsolen
+            Console.OutputEncoding = System.Text.Encoding.UTF8
+
 
             while (true) //yttre loopen som håller programmet igång.
             {
@@ -34,8 +37,9 @@ namespace ChessBoard
 
                     Console.WriteLine("Fel inmatning, vad god ange en siffra"); //Skickar ut ett meddelande till användaren att skriva en siffra
                 }
+
                 var myBoard = new RenderBoard(nummer); // skapar schackbrädet - när vi anropar konstruktorn med användarens siffra.
-                myBoard.Render(); //Test
+                //myBoard.Render(); //Test
             }
         }
     }
