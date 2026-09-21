@@ -23,4 +23,3 @@ Dotnet build
 Dotnet run
 
 📦 NuGet-paket
-Spectre.console - används för att formatera texten i fetstil, färg
