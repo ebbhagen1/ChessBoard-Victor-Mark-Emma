@@ -43,7 +43,7 @@ namespace ChessBoard
                     return 0;
                     }
                     // om gilitig, då går det att tolka som ett tal, det är minst 3, och det är max 50 
-                    if (int.TryParse(input, out nummer) && nummer >= 3 && nummer <= 50) //Programmet kommer inte att krascha om man skriver text istället för siffra
+                    if (int.TryParse(input, out int nummer) && nummer >= 3 && nummer <= 50) //Programmet kommer inte att krascha om man skriver text istället för siffra
                     {
                     return nummer; //Här avslutar vi main-metoden och stänger programmnet
                     }
