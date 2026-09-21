@@ -22,7 +22,7 @@ namespace ChessBoard
 					}
 					else
 					{
-						AnsiConsole.Markup($"[White on Black] ◻︎ [/]");
+						AnsiConsole.Markup($"[White on Black] ◻︎ [/]"); //Skapar en vit ruta
 
 					}
 				}
@@ -34,7 +34,7 @@ namespace ChessBoard
 			bool IsDarkSquare(int rad, int kolumn)
 
 			{
-				return (rad + kolumn) % 2 == 0;
+				return (rad + kolumn) % 2 == 0; //Tar emot 2 vården, om summan blir jämn (true) skapas en mörk ruta annars vit. (ojämn)
 
 			}
 		}

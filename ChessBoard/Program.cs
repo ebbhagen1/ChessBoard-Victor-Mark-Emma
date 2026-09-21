@@ -9,26 +9,25 @@ namespace ChessBoard
     {
         static void Main(string[] args) //Startpunkten
         {
-            /*Ansiconsole.markupLine("[bold yellow] Chessboard[/]");*/ //markupline lägger fär på rubriken
+           
             // Unicode-stöd i konsolen
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 
             while (true) //yttre loopen som håller programmet igång.
             {
-                int nummer = Readsize(); //number måste ligga utanför loopen 
+                int nummer = Readsize(); //Hämtar storleken från metoden nedan. 
 
-                while (true) // DEn inre Loopar till vi bryter oss ut med "Break" //
-                             // när vi inte vet hur många försök det kommer ta
-                if (nummer == 0)
+                
+                if (nummer == 0) //Stänger spelet om användaren skriver 0. 
                 {
                     Console.WriteLine("Tack för att du spelade!");
-                    break; // Giligt tal, den hoppar ut ur while loopen
+                    break; 
                 }
 
 
-                var myBoard = new RenderBoard(nummer); // skapar schackbrädet - när vi anropar konstruktorn med användarens siffra.
-                //myBoard.Render(); //Test
+                var myBoard = new RenderBoard(nummer); // skapar schackbrädet med den godkända siffran, ritar brädet. 
+                
             }
         }
                 public static int Readsize()
@@ -45,7 +44,7 @@ namespace ChessBoard
                     // om gilitig, då går det att tolka som ett tal, det är minst 3, och det är max 50 
                     if (int.TryParse(input, out int nummer) && nummer >= 3 && nummer <= 50) //Programmet kommer inte att krascha om man skriver text istället för siffra
                     {
-                    return nummer; //Här avslutar vi main-metoden och stänger programmnet
+                    return nummer; //Skickar tillbaka den godkända siffran till main.
                     }
                     
 
