@@ -11,7 +11,7 @@ namespace ChessBoard
         {
             /*Ansiconsole.markupLine("[bold yellow] Chessboard[/]");*/ //markupline lägger fär på rubriken
             // Unicode-stöd i konsolen
-            Console.OutputEncoding = System.Text.Encoding.UTF8
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 
             while (true) //yttre loopen som håller programmet igång.
