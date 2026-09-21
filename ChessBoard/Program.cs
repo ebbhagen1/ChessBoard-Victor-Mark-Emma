@@ -35,7 +35,7 @@ namespace ChessBoard
                     Console.WriteLine("Fel inmatning, vad god ange en siffra"); //Skickar ut ett meddelande till användaren att skriva en siffra
                 }
                 var myBoard = new RenderBoard(nummer); // skapar schackbrädet - när vi anropar konstruktorn med användarens siffra.
-                myBoard.Render();
+                myBoard.Render(); //Test
             }
         }
     }
