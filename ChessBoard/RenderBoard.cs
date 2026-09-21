@@ -17,12 +17,12 @@ namespace ChessBoard
 					if (IsDarkSquare(rad, kolumn)) // Om rad och kolumn är jämna, skriver programemet ut en X ruta, ananrs 0
 
 					{
-						AnsiConsole.Markup("[Black] ◼︎ [/]");//För att kunna skriva ut i färger/tecken behöver vi använda AnsiConsole. 
+						AnsiConsole.Markup($"[Black on White] ◼︎ [/]");//För att kunna skriva ut i färger/tecken behöver vi använda AnsiConsole. 
 
 					}
 					else
 					{
-						AnsiConsole.Markup("[White] ◻︎ [/]");
+						AnsiConsole.Markup($"[White on Black] ◻︎ [/]");
 
 					}
 				}
