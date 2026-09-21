@@ -17,5 +17,10 @@ Detta projekt är ett konsolbaserat schackbräde utvecklat i C#. Programmet låt
 ## 🚀 Kom igång (Klona, Bygg och Kör)
 Följ dessa steg för att köra projektet lokalt:
 
+git clone https://github.com/ebbhagen1/ChessBoard-Victor-Mark-Emma.git
+cd Chessboard-
+Dotnet build
+Dotnet run
 
 📦 NuGet-paket
+Spectre.console - används för att formatera texten i fetstil, färg
