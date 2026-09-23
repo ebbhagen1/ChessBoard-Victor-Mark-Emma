@@ -1,39 +1,39 @@
 ﻿using System;
 using System.Runtime.InteropServices.Marshalling;
-using Spectre.Console;  //Spectre låter oss rita ut snygga gränssnitt med färgstark text eller animationer.
+using Spectre.Console;  //Installerat Spectre.console som låter oss rita ut snygga gränssnitt med färgstark text eller animationer.
 
 namespace ChessBoard
 {
-	public class RenderBoard //Klass Renderboard 
+	public class RenderBoard //Klass som ansvarar för att bygga och skriva ut schackbrädet. 
 	{
-		public RenderBoard(int size) //Konstruktor tar emot storleken som en parameter = int size
+		public RenderBoard(int size) //Konstruktor tar emot storleken som en parameter = int size när objektet skapas
 		{
 
-			for (int rad = 0; rad < size; rad++)  //yttrelopp för rader baserat på användarens inmatning 
+			for (int rad = 0; rad < size; rad++)  //yttrelopp som håller reda på rader (höjden) baserat på användarens inmatning 
 			{
-				for (int kolumn = 0; kolumn < size; kolumn++) //inre loop (Kolumn är bredden på schackbrädet)
+				for (int kolumn = 0; kolumn < size; kolumn++) //inre loop som håller reda på kolumnerna, (bredden på varje enskild rad)
 				{
-					//Modulo kan räkna ut schackmönstret oavsett vilken storlek användaren väljer
-					if (IsDarkSquare(rad, kolumn)) // Om rad och kolumn är jämna, skriver programemet ut en ◼︎ ruta, ananrs ◻︎ 
+					
+					if (IsDarkSquare(rad, kolumn)) // Anropar hjälpmetod IsDarkSquare för att avgöra om raden ska vara mörk eller ljus 
 
                     {
 						AnsiConsole.Markup($"[white] ◼︎ [/]");//För att kunna skriva ut i färger/tecken behöver vi använda AnsiConsole. 
-
+																// Skriver ut en mörk ruta med vit tecken
 					}
 					else
 					{
-						AnsiConsole.Markup($"[white] ◻︎ [/]"); //skapar en svart ruta 
+						AnsiConsole.Markup($"[white] ◻︎ [/]"); //skriver ut en ljus markerad ruta om inte villkoret uppfylls
 					}
 				}
 
-				Console.WriteLine(); //Hoppar till nästa rad när kolumnerna är klara
+				Console.WriteLine(); //När den inre loopen är klar för en rad för vi ett radbyte
 			}
 
 
-			bool IsDarkSquare(int rad, int kolumn)
+			bool IsDarkSquare(int rad, int kolumn) //Lokal hjälpmetod för att räkna ut schackmönstret
 
-			{
-				return (rad + kolumn) % 2 == 0; //Tar emot 2 vården, om summan blir jämn (true) skapas en mörk ruta annars vit. (ojämn)
+            {       //Modulo (% 2) kollar om summan av rad och kolumn är jämn (villkoret)
+                return (rad + kolumn) % 2 == 0; //om summan är jämn blir det true (mörk ruta) annars false (ljus ruta)
 
 			}
 		}
