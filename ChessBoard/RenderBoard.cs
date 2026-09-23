@@ -14,16 +14,15 @@ namespace ChessBoard
 				for (int kolumn = 0; kolumn < size; kolumn++) //inre loop (Kolumn är bredden på schackbrädet)
 				{
 					//Modulo kan räkna ut schackmönstret oavsett vilken storlek användaren väljer
-					if (IsDarkSquare(rad, kolumn)) // Om rad och kolumn är jämna, skriver programemet ut en X ruta, ananrs 0
+					if (IsDarkSquare(rad, kolumn)) // Om rad och kolumn är jämna, skriver programemet ut en ◼︎ ruta, ananrs ◻︎ 
 
-					{
-						AnsiConsole.Markup($"[Black on White] ◼︎ [/]");//För att kunna skriva ut i färger/tecken behöver vi använda AnsiConsole. 
+                    {
+						AnsiConsole.Markup($"[white] ◼︎ [/]");//För att kunna skriva ut i färger/tecken behöver vi använda AnsiConsole. 
 
 					}
 					else
 					{
-						AnsiConsole.Markup($"[White on Black] ◻︎ [/]"); //Skapar en vit ruta
-
+						AnsiConsole.Markup($"[white] ◻︎ [/]"); //skapar en svart ruta 
 					}
 				}
 
