@@ -30,26 +30,26 @@ namespace ChessBoard
                 
             }
         }
-                public static int Readsize() //En metod som hanterar användarens inmatning och validering
-                {
-                while (true) //loopar tills användaren matar in en giltig siffra
-                {
-                    Console.WriteLine("Ange storleken på schackbrädet 3 - 50, vill du avsluta ange 0! "); // Vi skriver ut en fråga till använden om att ge en siffra mellan 3 -50. 
-                    string input = Console.ReadLine(); //Läser in råtext
+        public static int Readsize() //En metod som hanterar användarens inmatning och validering
+        {
+            while (true) //loopar tills användaren matar in en giltig siffra
+        {
+            Console.WriteLine("Ange storleken på schackbrädet 3 - 50, vill du avsluta ange 0! "); // Vi skriver ut en fråga till använden om att ge en siffra mellan 3 -50. 
+            string? input = Console.ReadLine(); //Läser in råtext
                     
-                    if (input == "0") //Snabbkoll om användaren vill avsluta programmet direkt 
-                    {
-                    return 0;
-                    }
+            if (input == "0") //Snabbkoll om användaren vill avsluta programmet direkt 
+            {
+            return 0;
+            }
                 //int.tryparse kollar om inmatningen är ett giltigt heltal 3-50 och gör så att programmet ej kommer att krascha om man skriver text istället för siffra
-                if (int.TryParse(input, out int nummer) && nummer >= 3 && nummer <= 50) 
-                    {
-                    return nummer; //Skickar tillbaka den godkända siffran till main.
-                    }
+            if (int.TryParse(input, out int nummer) && nummer >= 3 && nummer <= 50) 
+            {
+            return nummer; //Skickar tillbaka den godkända siffran till main.
+            }
                     
 
-                        Console.WriteLine("Fel inmatning, vad god ange en siffra"); //Skickar ut ett meddelande till användaren att skriva en siffra
-                    }
-                }
+                Console.WriteLine("Fel inmatning, vad god ange en siffra"); //Skickar ut ett meddelande till användaren att skriva en siffra
+            }
+        }
     }   
 }

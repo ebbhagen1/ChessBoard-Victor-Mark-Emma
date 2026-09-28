@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices.Marshalling;
 using Spectre.Console;  //Installerat Spectre.console som låter oss rita ut snygga gränssnitt med färgstark text eller animationer.
 
 namespace ChessBoard
